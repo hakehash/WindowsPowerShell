@@ -1,4 +1,4 @@
-# WindowsPowerSheLL
+# WindowsPowerShell
 ## インストール
 1. powershellを起動して以下を実行
 

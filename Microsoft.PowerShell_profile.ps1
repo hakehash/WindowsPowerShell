@@ -12,3 +12,4 @@ function iexplore() {
 Remove-Item Alias:curl
 Set-Alias vi vim
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste

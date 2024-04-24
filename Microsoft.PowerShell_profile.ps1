@@ -25,9 +25,9 @@ function ls(){
   Param($PATH)
   Get-ChildItem $PATH -Name
 }
-Remove-Item Alias:curl
-Remove-Item Alias:cd
-Remove-Item Alias:ls
+Remove-Item Alias:cd -ErrorAction SilentlyContinue
+Remove-Item Alias:curl -ErrorAction SilentlyContinue
+Remove-Item Alias:ls -ErrorAction SilentlyContinue
 Set-Alias vi vim
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste

@@ -25,9 +25,13 @@ function ls(){
   Param($PATH)
   Get-ChildItem $PATH -Name
 }
+function pwd(){
+  (Get-Location).Path
+}
 Remove-Item Alias:cd -ErrorAction SilentlyContinue
 Remove-Item Alias:curl -ErrorAction SilentlyContinue
 Remove-Item Alias:ls -ErrorAction SilentlyContinue
+Remove-Item Alias:pwd -ErrorAction SilentlyContinue
 Set-Alias vi vim
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste

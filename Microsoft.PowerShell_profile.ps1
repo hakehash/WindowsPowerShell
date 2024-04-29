@@ -36,6 +36,9 @@ Remove-Item Alias:cd -ErrorAction SilentlyContinue
 Remove-Item Alias:curl -ErrorAction SilentlyContinue
 Remove-Item Alias:ls -ErrorAction SilentlyContinue
 Remove-Item Alias:pwd -ErrorAction SilentlyContinue
+Set-Alias dirname Split-Path
+Set-Alias grep Select-String
+Set-Alias uniq Get-Unique
 Set-Alias vi vim
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste

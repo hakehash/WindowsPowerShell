@@ -10,6 +10,10 @@ function cd(){
     Set-Location $PATH
   }
 }
+function tac() {
+  Param($FILE)
+  (Get-Content $FILE)[(Get-Content $FILE).length..0]
+}
 function touch() {
   Param($FILE)
   if (Test-Path $FILE) {

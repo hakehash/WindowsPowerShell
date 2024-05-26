@@ -42,3 +42,4 @@ Set-Alias uniq Get-Unique
 Set-Alias vi vim
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste
+$OutputEncoding = [Console]::OutputEncoding

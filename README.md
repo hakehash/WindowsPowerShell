@@ -12,4 +12,4 @@
 ## 神機能
 このリポジトリとは関係ありませんが、`Set-WinUserLanguageList`は神機能なので覚えておいてくださいね。
 
-参考: [Redirecting](https://answers.microsoft.com/en-us/windows/forum/all/how-to-remove-the-unknown-localeqaa-latn-language/25c9aa40-656f-418b-8f50-ca767d070205)
+参考: [How to remove the Unknown Locale(qaa-latn) language - Microsoft Community](https://answers.microsoft.com/en-us/windows/forum/all/how-to-remove-the-unknown-localeqaa-latn-language/25c9aa40-656f-418b-8f50-ca767d070205)

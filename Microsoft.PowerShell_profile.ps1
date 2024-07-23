@@ -1,4 +1,4 @@
-function cd(){
+function cd() {
   Param($PATH=$HOME)
   if ($PATH -eq '-') {
     $TEMPPWD = Get-Location
@@ -29,7 +29,11 @@ function ls(){
   Param($PATH)
   Get-ChildItem $PATH -Name
 }
-function pwd(){
+function photoviewer() {
+  Param($FILE)
+  rundll32 "C:\Program Files\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen (Get-Item $FILE).FullName
+}
+function pwd() {
   (Get-Location).Path
 }
 Remove-Item Alias:cd -ErrorAction SilentlyContinue

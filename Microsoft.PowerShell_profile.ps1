@@ -44,6 +44,7 @@ Set-Alias dirname Split-Path
 Set-Alias grep Select-String
 Set-Alias uniq Get-Unique
 Set-Alias vi vim
+Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste
 $OutputEncoding = [Console]::OutputEncoding

@@ -36,14 +36,22 @@ function photoviewer() {
 function pwd() {
   (Get-Location).Path
 }
+function type(){
+  Param($COMMAND)
+  (Get-Command $COMMAND).Source
+}
+Add-Type -AssemblyName "Microsoft.VisualBasic"
 Remove-Item Alias:cd -ErrorAction SilentlyContinue
 Remove-Item Alias:curl -ErrorAction SilentlyContinue
 Remove-Item Alias:ls -ErrorAction SilentlyContinue
 Remove-Item Alias:pwd -ErrorAction SilentlyContinue
+Remove-Item Alias:type -ErrorAction SilentlyContinue
+Remove-Item Alias:where -Force -ErrorAction SilentlyContinue
 Set-Alias dirname Split-Path
 Set-Alias grep Select-String
 Set-Alias uniq Get-Unique
 Set-Alias vi vim
+Set-Alias which type
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -Chord Ctrl+y -Function Paste

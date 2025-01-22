@@ -10,9 +10,30 @@ function cd() {
     Set-Location $PATH
   }
 }
+function iexplore() {
+  (New-Object -ComObject InternetExplorer.Application).Visible = $True
+}
+function ls(){
+  Param($PATH)
+  Get-ChildItem $PATH -Name
+}
+function mkdir(){
+  New-Item -ItemType "directory" -Path $Args
+}
+function photoviewer() {
+  Param($FILE)
+  rundll32 "C:\Program Files\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen (Get-Item $FILE).FullName
+}
+function pwd() {
+  (Get-Location).Path
+}
 function tac() {
   Param($FILE)
   (Get-Content $FILE)[(Get-Content $FILE).length..0]
+}
+function tail(){
+  Param($FILE, [int]$n = 10)
+  Get-Content $FILE -Tail $n
 }
 function touch() {
   Param($FILE)
@@ -21,20 +42,6 @@ function touch() {
   } else {
     Out-File -Encoding ASCII -FilePath $FILE -NoClobber
   }
-}
-function iexplore() {
-  (New-Object -ComObject InternetExplorer.Application).Visible = $True
-}
-function ls(){
-  Param($PATH)
-  Get-ChildItem $PATH -Name
-}
-function photoviewer() {
-  Param($FILE)
-  rundll32 "C:\Program Files\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen (Get-Item $FILE).FullName
-}
-function pwd() {
-  (Get-Location).Path
 }
 function type(){
   Param($COMMAND)

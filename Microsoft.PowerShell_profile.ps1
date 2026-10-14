@@ -1,3 +1,7 @@
+function basename() {
+  Param($PATH)
+  Split-Path $PATH -Leaf
+}
 function cd() {
   Param($PATH=$HOME)
   if ($PATH -eq '-') {
